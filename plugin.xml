@@ -27,12 +27,9 @@
             </feature>
         </config-file>
             
-        <config-file target="/config.xml" parent="/widget/">
-            <platform name="android">
-                <allow-intent href="market:*" />
-                <preference name="AndroidLaunchMode" value="singleTask" />
-            </platform>
-        </config-file>
+         <config-file target="res/xml/config.xml" parent="/*">
+            <preference name="AndroidLaunchMode" value="singleTask"/>
+         </config-file>
             
         <config-file target="AndroidManifest.xml" parent="/manifest/application/activity">
             <intent-filter>
