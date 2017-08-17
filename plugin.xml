@@ -27,7 +27,14 @@
             </feature>
         </config-file>
             
-        <config-file target="AndroidManifest.xml" parent="/*">
+        <config-file target="/config.xml" parent="/widget/">
+            <platform name="android">
+                <allow-intent href="market:*" />
+                <preference name="AndroidLaunchMode" value="singleTask" />
+            </platform>
+        </config-file>
+            
+        <config-file target="AndroidManifest.xml" parent="/manifest/application/activity">
             <intent-filter>
                  <action android:name="android.intent.action.SEND" />
                  <action android:name="android.intent.action.SEND_MULTIPLE" />
